@@ -54,7 +54,7 @@ const speak = () =>{
     body.style.background = '#141414 url("https://github.com/bradtraversy/type-n-speak/blob/master/dist/img/wave.gif?raw=true")';
     body.style.backgroundRepeat = 'repeat-x';
     body.style.backgroundSize = '100% 100%';
-    
+
     // Get speak text
     const speakText = new SpeechSynthesisUtterance(textInput.value);
     //speak end

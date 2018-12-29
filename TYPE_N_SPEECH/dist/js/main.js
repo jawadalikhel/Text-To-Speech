@@ -90,5 +90,8 @@ textForm.addEventListener('submit', e =>{
   textInput.blur();
 });
 
-// addEventListener rate value change
+// eventListener for rate value change
 rate.addEventListener('change', e => rateValue.textContent = rate.value);
+
+// evenListener for the pitch value change
+pitch.addEventListener('change', e => pitchValue.textContent = pitch.value);

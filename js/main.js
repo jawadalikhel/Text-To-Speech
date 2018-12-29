@@ -12,6 +12,7 @@ const rateValue = document.querySelector('#rate-value');
 const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('#pitch-value');
 const body = document.querySelector('body');
+const speakIt = document.querySelector('#speakIt');
 
 // Init voices array
 let voices = [];
@@ -101,12 +102,14 @@ textForm.addEventListener('submit', e =>{
 rate.addEventListener('change', e => {
   rateValue.textContent = rate.value
   console.log('rateValue changed')
+  speak();
 });
 
 // evenListener for the pitch value change
 pitch.addEventListener('change', e => {
   pitchValue.textContent = pitch.value
   console.log('pitchValue changed')
+  speak();
 
 });
 
@@ -115,3 +118,9 @@ voiceSelect.addEventListener('change', e => {
   speak();
   console.log('Voice select changed');
 });
+
+// this evenListener is for when user press btn for speak it will speak the input
+speakIt.addEventListener('click', e =>{
+  console.log('bton clicked')
+  speak();
+})

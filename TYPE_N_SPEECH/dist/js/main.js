@@ -4,7 +4,7 @@ console.log('js is live')
 const synth = window.speechSynthesis;
 
 // DOM Elements
-const textForm = document.querySelector('#form');
+const textForm = document.querySelector('form');
 const textInput = document.querySelector('#text-input');
 const voiceSelect = document.querySelector('#voice-select');
 const rate = document.querySelector('#rate');
@@ -50,10 +50,16 @@ const speak = () =>{
   }
 
   if(textInput.value !== ''){
+    // add background animation
+    body.style.background = '#141414 url("https://github.com/bradtraversy/type-n-speak/blob/master/dist/img/wave.gif?raw=true")';
+    body.style.backgroundRepeat = 'repeat-x';
+    body.style.backgroundSize = '100% 100%';
+    
     // Get speak text
     const speakText = new SpeechSynthesisUtterance(textInput.value);
     //speak end
     speakText.onend = e => {
+      body.style.background = '#141414';
       console.log('Done speaking...');
     }
 

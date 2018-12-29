@@ -82,3 +82,10 @@ const speak = () =>{
 };
 
 //////////////////////////// EVENT LISTENERS
+
+// form submition(text form submit)
+textForm.addEventListener('submit', e =>{
+  e.preventDefault();
+  speak();
+  textInput.blur();
+});

@@ -13,5 +13,5 @@ Live Demo: https://textnspeak.netlify.com/
 3. CSS <br/>
 
 # Future Goals
-
+1. I would like to add an option where there user can select different languages from different countries.
 

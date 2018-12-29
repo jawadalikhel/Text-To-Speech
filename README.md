@@ -1,6 +1,6 @@
 # Text-To-Speech
 This is Text To Speech &amp; Synthesis App, and using Web Speech API
-<h3>Live Demo</h3> https://textnspeak.netlify.com/
+Live Demo: https://textnspeak.netlify.com/
 
 <img src="/textNSpeak.png" />
 

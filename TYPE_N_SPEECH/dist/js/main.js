@@ -4,7 +4,7 @@ console.log('js is live')
 const synth = window.speechSynthesis;
 
 // DOM Elements
-const textForm = document.querySelector('form');
+const textForm = document.querySelector('#form');
 const textInput = document.querySelector('#text-input');
 const voiceSelect = document.querySelector('#voice-select');
 const rate = document.querySelector('#rate');
@@ -87,11 +87,25 @@ const speak = () =>{
 textForm.addEventListener('submit', e =>{
   e.preventDefault();
   speak();
-  textInput.blur();
+  // textInput.blur();
+  console.log('Your text got submited')
 });
 
 // eventListener for rate value change
-rate.addEventListener('change', e => rateValue.textContent = rate.value);
+rate.addEventListener('change', e => {
+  rateValue.textContent = rate.value
+  console.log('rateValue changed')
+});
 
 // evenListener for the pitch value change
-pitch.addEventListener('change', e => pitchValue.textContent = pitch.value);
+pitch.addEventListener('change', e => {
+  pitchValue.textContent = pitch.value
+  console.log('pitchValue changed')
+
+});
+
+// voice select change
+voiceSelect.addEventListener('change', e => {
+  speak();
+  console.log('Voice select changed');
+});
